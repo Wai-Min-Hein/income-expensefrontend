@@ -3,6 +3,8 @@ import { useForm } from "@mantine/form";
 import axios from "axios";
 import { useDispatch } from "react-redux";
 import { signInFailure, signInStart, signInSuccess } from "../Slices/userSlice";
+import { useNavigate } from "react-router-dom";
+
 
 const SignIn = () => {
   const dispatch = useDispatch();
@@ -30,6 +32,8 @@ const SignIn = () => {
       dispatch(signInFailure(error.message));
     }
   };
+
+  const nav = useNavigate()
   return (
     <div>
       <h1 className="text-center">Login</h1>
@@ -59,7 +63,7 @@ const SignIn = () => {
       </Box>
 
       <div className="flex justify-center mt-8">
-        <p>Don`t you have an ccount? <a href="/signUp">Sing Up</a> here.</p>
+        <p>Don`t you have an ccount? <span onClick={() => nav('/login')}>Sing Up</span> here.</p>
       </div>
     </div>
   );
