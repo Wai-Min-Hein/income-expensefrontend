@@ -163,7 +163,7 @@ const App = () => {
   };
 
   return (
-    <div className="min-h-screen container mx-auto">
+    <div className="min-h-screen container mx-auto px-6">
       <div className="flex items-center justify-end gap-4">
         <div className="flex justify-start items-center gap-2">
           <img
@@ -185,7 +185,7 @@ const App = () => {
         />
       </div>
 
-      <h1 className="text-center text-4xl">
+      <h1 className="text-center text-2xl md:text-4xl">
         Total Amount -{" "}
         <span className={`${totalAmount <= 0 ? "text-red-500" : ""}`}>
           {totalAmount} KS
@@ -278,7 +278,8 @@ const App = () => {
         </div>
 
         <div className="mt-8">
-          <Table>
+          <Table.ScrollContainer minWidth={500}>
+            <Table>
             <Table.Thead>
               <Table.Tr>
                 <Table.Th>Type</Table.Th>
@@ -288,7 +289,8 @@ const App = () => {
               </Table.Tr>
             </Table.Thead>
             <Table.Tbody>{rows}</Table.Tbody>
-          </Table>
+            </Table>
+          </Table.ScrollContainer>
         </div>
       </div>
     </div>
