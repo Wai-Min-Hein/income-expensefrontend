@@ -63,7 +63,7 @@ const SignIn = () => {
       </Box>
 
       <div className="flex justify-center mt-8">
-        <p>Don`t you have an ccount? <span onClick={() => nav('/login')}>Sing Up</span> here.</p>
+        <p>Don`t you have an ccount? <span className="cursor-pointer" onClick={() => nav('/signUp')}>Sing Up</span> here.</p>
       </div>
     </div>
   );
