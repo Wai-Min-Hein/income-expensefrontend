@@ -10,9 +10,9 @@ const SignUp = () => {
   const form = useForm({
     mode: "uncontrolled",
     initialValues: {
-        userName: 'Gyo Thar',
-      email: "gyothar@gmail.com",
-      password: "11111111",
+        userName: '',
+      email: "",
+      password: "",
     },
 
     validate: {

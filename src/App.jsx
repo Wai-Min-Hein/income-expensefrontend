@@ -109,9 +109,9 @@ const App = () => {
 
   const rows = datas?.map((data) => (
     <Table.Tr key={data._id}>
-      <Table.Td>{data.type}</Table.Td>
+      <Table.Td className={`${data.type == 'Expense'? 'text-red-600': ''}`}>  {data.type}</Table.Td>
       <Table.Td>{data.title}</Table.Td>
-      <Table.Td>{data.amount}</Table.Td>
+      <Table.Td  className={`${data.type == 'Expense'? 'text-red-600': ''}`}> <span className={`${data.type == 'Expense'? '': 'hidden'}`}>-</span> {data.amount}</Table.Td>
       <Table.Td>{data.time}</Table.Td>
       <Table.Td>
         <div className="flex gap-4">

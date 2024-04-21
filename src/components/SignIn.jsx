@@ -11,8 +11,8 @@ const SignIn = () => {
   const form = useForm({
     mode: "uncontrolled",
     initialValues: {
-      email: "waiminhein@gmail.com",
-      password: "11111111",
+      email: "",
+      password: "",
     },
 
     validate: {
@@ -63,7 +63,7 @@ const SignIn = () => {
       </Box>
 
       <div className="flex justify-center mt-8">
-        <p>Don`t you have an ccount? <span className="cursor-pointer" onClick={() => nav('/signUp')}>Sing Up</span> here.</p>
+        <p>Don`t you have an ccount? <span className="cursor-pointer text-blue-600" onClick={() => nav('/signUp')}>Sing Up</span> here.</p>
       </div>
     </div>
   );
